@@ -1,0 +1,35 @@
+{
+  "name": "crypto-promise",
+  "version": "1.0.0",
+  "description": "Promise version of Node.js crypto module.",
+  "license": {
+    "type": "Unlicense",
+    "url": "http://unlicense.org/"
+  },
+  "author": {
+    "name": "Valérian Galliat",
+    "url": "http://val.codejam.info/"
+  },
+  "files": [
+    "index.js",
+    "README.md",
+    "UNLICENSE"
+  ],
+  "homepage": "https://github.com/valeriangalliat/crypto-promise",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/valeriangalliat/crypto-promise.git"
+  },
+  "dependencies": {
+    "concat-stream-promise": "^0.1.1",
+    "es6-denodeify": "^0.1.1"
+  },
+  "devDependencies": {
+    "babel": "^4.4.5"
+  },
+  "scripts": {
+    "build": "babel index.es6.js -o index.js",
+    "prepublish": "$npm_package_scripts_build",
+    "test": "$npm_package_scripts_build && babel-node --experimental test.js"
+  }
+}
