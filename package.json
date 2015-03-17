@@ -1,6 +1,6 @@
 {
   "name": "crypto-promise",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Promise version of Node.js crypto module.",
   "license": {
     "type": "Unlicense",
@@ -21,8 +21,8 @@
     "url": "https://github.com/valeriangalliat/crypto-promise.git"
   },
   "dependencies": {
-    "concat-stream-promise": "^0.1.1",
-    "es6-denodeify": "^0.1.1"
+    "promise": "^6.1.0",
+    "stream-concat-promise": "^1.0.0"
   },
   "devDependencies": {
     "babel": "^4.4.5"

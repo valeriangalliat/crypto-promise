@@ -1,5 +1,5 @@
-const assert = require('assert')
-const crypto = require('./')
+import assert from 'assert'
+import * as crypto from './'
 
 async () => {
   const hash = await crypto.hash('md5')('hello')
