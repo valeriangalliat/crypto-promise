@@ -25,7 +25,8 @@
     "stream-concat-promise": "^1.0.0"
   },
   "devDependencies": {
-    "babel": "^4.4.5"
+    "babel": "^4.4.5",
+    "promise-done": "^1.0.0"
   },
   "scripts": {
     "build": "babel index.es6.js -o index.js",

@@ -17,4 +17,4 @@ async () => {
   const rand = await crypto.randomBytes(16)
   assert.equal(rand.length, 16)
 }()
-  .then(null, err => setTimeout(() => { throw err }))
+  .then(null, require('promise-done'))
