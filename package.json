@@ -1,6 +1,6 @@
 {
   "name": "crypto-promise",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Promise version of Node.js crypto module.",
   "license": "Unlicense",
   "author": {
