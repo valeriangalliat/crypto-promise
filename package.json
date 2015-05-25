@@ -2,10 +2,7 @@
   "name": "crypto-promise",
   "version": "1.0.1",
   "description": "Promise version of Node.js crypto module.",
-  "license": {
-    "type": "Unlicense",
-    "url": "http://unlicense.org/"
-  },
+  "license": "Unlicense",
   "author": {
     "name": "Valérian Galliat",
     "url": "http://val.codejam.info/"
