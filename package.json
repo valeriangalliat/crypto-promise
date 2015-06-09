@@ -22,12 +22,18 @@
     "stream-concat-promise": "^1.0.0"
   },
   "devDependencies": {
-    "babel": "^4.4.5",
-    "promise-done": "^1.0.0"
+    "babel": "^5.5.6",
+    "babel-eslint": "^3.1.14",
+    "promise-done": "^1.0.0",
+    "standard": "^4.0.1"
   },
   "scripts": {
     "build": "babel index.es6.js -o index.js",
-    "prepublish": "$npm_package_scripts_build",
-    "test": "$npm_package_scripts_build && babel-node --experimental test.js"
+    "lint": "standard index.es6.js test.js",
+    "prepublish": "npm run build",
+    "test": "npm run build && npm run lint && babel-node --stage 1 test.js"
+  },
+  "standard": {
+    "parser": "babel-eslint"
   }
 }
