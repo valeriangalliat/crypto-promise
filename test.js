@@ -16,6 +16,10 @@ const test = async () => {
 
   const rand = await crypto.randomBytes(16)
   assert.equal(rand.length, 16)
+
+  const key = await crypto.pbkdf2('secret', 'salt', 100000, 512, 'sha512')
+  const keyHash = await crypto.hash('md5')(key)
+  assert.equal(keyHash.toString('hex'), '64d04d48722ee726d8344c51cb074455')
 }
 
 test()
