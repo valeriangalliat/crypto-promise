@@ -1,7 +1,7 @@
-import assert from 'assert'
-import * as crypto from './'
+const assert = require('assert')
+const crypto = require('./')
 
-async () => {
+const test = async () => {
   const hash = await crypto.hash('md5')('hello')
   assert.equal(hash.toString('hex'), '5d41402abc4b2a76b9719d911017c592')
 
@@ -16,5 +16,6 @@ async () => {
 
   const rand = await crypto.randomBytes(16)
   assert.equal(rand.length, 16)
-}()
-  .then(null, require('promise-done'))
+}
+
+test()

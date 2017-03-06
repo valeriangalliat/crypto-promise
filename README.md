@@ -8,7 +8,7 @@ Example
 ```js
 const crypto = require('crypto-promise')
 
-async () => {
+const test = async () => {
   const hash = await crypto.hash('md5')('hello')
   hash.toString('hex') // 5d41402abc4b2a76b9719d911017c592
 
@@ -23,5 +23,7 @@ async () => {
 
   const rand = await crypto.randomBytes(16)
   rand.length // 16
-}()
+}
+
+test()
 ```
