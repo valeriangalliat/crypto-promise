@@ -14,6 +14,12 @@ const test = async () => {
   const decipher = await crypto.decipher('aes256', 'secret')('f824105d6cadf7776b130cd80fdfeabf', 'hex')
   assert.equal(decipher.toString(), 'hello')
 
+  const cipheriv = await crypto.cipheriv('aes256', new Buffer(32), new Buffer(16))('hello')
+  assert.equal(cipheriv.toString('hex'), 'c235de24d239e03cc8e377c604fca67b')
+
+  const decipheriv = await crypto.decipheriv('aes256', new Buffer(32), new Buffer(16))('c235de24d239e03cc8e377c604fca67b', 'hex')
+  assert.equal(decipheriv.toString(), 'hello')
+
   const rand = await crypto.randomBytes(16)
   assert.equal(rand.length, 16)
 
